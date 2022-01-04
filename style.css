@@ -12,13 +12,14 @@ body{
 }
 header{
     background: radial-gradient(#fff,#fcb4b4);
+    min-height: 840px;
 }
 header .row{
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
-
+/*--------Header-------*/
 .container{
     max-width: 1300px;
     margin:auto;
@@ -43,7 +44,7 @@ nav ul li{
     margin-right: 20px;
 }
 
-
+/*--------First Banner-------*/
 .row{
     display: flex;
     align-items: center;
@@ -72,9 +73,7 @@ nav ul li{
     border-radius: 20px;
 }
 
-.categories{
-    margin:70px;
-}
+/*--------Products-------*/
 .small-container{
     max-width: 1080px;
     margin:auto;
@@ -86,7 +85,6 @@ nav ul li{
 }
 .col-3 img{
     width: 100%;
-    
 }
 .col-4{
     flex-basis: 25%;
@@ -122,4 +120,109 @@ nav ul li{
 }
 h4{
     color: #555;
+}
+
+
+/*--------offer-------*/
+.offer{
+    background: radial-gradient(#fff,#fcb4b4);
+    margin-top: 8px;
+    padding: 30px 0px;
+}
+small{
+    color: #555;
+}
+
+/*--------Testimonial-------*/
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    display: inline-block;
+    height: 300px;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.158) ;
+    border: 1px solid rgb(255, 242, 242);
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+
+.brands{
+    margin: 100px 100px 150px 80px;
+}
+.col-5{
+    display: flex;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0%);
+}
+
+/*--------Footer-------*/
+footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+footer p{
+    color: #8a8a8a;
+}
+footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    cursor: pointer;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 150px;
+    filter: grayscale(100%);
+}
+footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 10px;px 0px;
+}
+.copy{
+    text-align: center;
 }
