@@ -12,7 +12,7 @@ body{
 }
 header{
     background: radial-gradient(#fff,#fcb4b4);
-    min-height: 840px;
+    height: 840px;
 }
 header .row{
     margin-top: 70px;
@@ -22,7 +22,7 @@ header .row{
 /*--------Header-------*/
 .container{
     max-width: 1300px;
-    margin:auto;
+    margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -53,7 +53,7 @@ nav ul li{
 }
 .col-2{
     flex-basis: 50%;
-    min-width: 300px;
+    
 }
 .col-2 img{
     max-width: 100%;
@@ -221,8 +221,53 @@ footer hr{
     border: none;
     background: #b5b5b5;
     height: 1px;
-    margin: 10px;px 0px;
+    margin: 10px 0;
 }
 .copy{
     text-align: center;
+}
+
+/*--------Responsividade-------*/
+.menu-icon{
+    width: 25px;
+    margin-left: 20px ;
+    display: none;
+}
+/*--------media query do menu-------*/
+
+@media only screen and (max-width: 800px){
+
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s ;
+    }
+    
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+/*--------media query do menu 600px-------*/
+
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 50%;
+    }
 }
