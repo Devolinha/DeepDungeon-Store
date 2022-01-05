@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     
+    
 </head>
 <body>
     <header>
@@ -310,46 +311,8 @@
             </div>
         </div>
         </div>
-    </div>   
+    </div>
 
-    <script>
-    // JS para o menu responsivo
-
-    var MenuItems =  document.getElementById("MenuItems");
-
-    MenuItems.style.maxHeight = "0px";
-
-    function menutoggle(){
-        if(MenuItems.style.maxHeight == "0px")
-        {
-            MenuItems.style.maxHeight = "200px"
-        }
-        else
-        {
-            MenuItems.style.maxHeight = "0px"
-        }
-    }
-
-    //modal iniciar
-    function iniciaModal(modalID) {
-        const modal = document.getElementById(modalID);
-        if(modal){
-            modal.classList.add('show');
-            modal.addEventListener('click', (e) => {
-            if(e.target.id == modalID || e.target.className == 'button-close' ){
-                modal.classList.remove('show')
-            }
-        });
-        }
-        
-    }
-
-    const item = document.querySelector('.item-img');
-    item.addEventListener('click', function(){
-        iniciaModal('item-modal');
-    });
-    
-    </script>
-
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
