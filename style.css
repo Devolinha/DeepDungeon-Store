@@ -289,3 +289,81 @@ footer hr{
 .col-4:hover{
     background-color: rgba(255, 255, 255, 0.219) ;
 }
+
+/*--------Modal-------*/
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: rgb(69, 24, 78);
+    width: 55%;
+    height: auto;
+    min-width: 300px;
+    padding: 40px;
+    position: relative;
+}
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px , 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0 , 0)
+    }
+}
+
+.show .modal{
+    animation: modal 0.3s;
+}
+.button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    margin: 5px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.modal-container.show {
+    display: flex;
+}
+
+.modal-image-container {
+    float: left;
+    width: 60%;
+}
+
+.modal-item-image {
+    width: 95%;
+}
+
+.modal-item-title {
+    margin: 15px 0;
+}
+#button-add-cart {
+    display: block;
+    margin: 15px;
+    background-color:rgb(255, 57, 57) ;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal-item-title:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-item-ingredients {
+    list-style: none;
+}

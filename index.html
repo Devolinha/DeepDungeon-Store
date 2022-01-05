@@ -72,7 +72,7 @@
             <h2 class="title">Featured Products</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="Items/mana_potion.png" alt="">
+                    <img class="item-img" src="Items/mana_potion.png" alt="">
                     <h4>Mana Potion</h4>
                     <div class="rating">
 
@@ -80,7 +80,7 @@
                     <p>$20.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/pink_potion.png" alt="">
+                    <img class="item-img" src="Items/pink_potion.png" alt="">
                     <h4>Pink Potion</h4>
                     <div class="rating">
                         
@@ -88,7 +88,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/green_potion.png" alt="">
+                    <img class="item-img" src="Items/green_potion.png" alt="">
                     <h4>Green Potion</h4>
                     <div class="rating">
                         
@@ -96,7 +96,7 @@
                     <p>$50.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/health_potion.png" alt="">
+                    <img class="item-img" src="Items/health_potion.png" alt="">
                     <h4>Health Potion</h4>
                     <div class="rating">
                         
@@ -110,7 +110,7 @@
             <h2 class="title">Latest Products</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="Items/ice_axe.png" alt="">
+                    <img class="item-img" src="Items/ice_axe.png" alt="">
                     <h4>Ice Axe</h4>
                     <div class="rating">
 
@@ -118,7 +118,7 @@
                     <p>$200.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/lava_sword.png" alt="">
+                    <img class="item-img" src="Items/lava_sword.png" alt="">
                     <h4>Lava Sword</h4>
                     <div class="rating">
                         
@@ -126,7 +126,7 @@
                     <p>$160.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/wood_book.png" alt="">
+                    <img class="item-img" src="Items/wood_book.png" alt="">
                     <h4>Wood Book</h4>
                     <div class="rating">
                         
@@ -134,7 +134,7 @@
                     <p>$500.00</p>
                 </div>
                 <div class="col-4">
-                    <img src="Items/yellow_potion.png" alt="">
+                    <img class="item-img" src="Items/yellow_potion.png" alt="">
                     <h4>Yellow Potion</h4>
                     <div class="rating">
                         
@@ -143,7 +143,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img src="Items/lava_book.png" alt="">
+                        <img class="item-img" src="Items/lava_book.png" alt="">
                         <h4>Lava Book</h4>
                         <div class="rating">
     
@@ -151,7 +151,7 @@
                         <p>$600.00</p>
                     </div>
                     <div class="col-4">
-                        <img src="Items/Pink_potion.png" alt="">
+                        <img class="item-img" src="Items/Pink_potion.png" alt="">
                         <h4>Pink Potion</h4>
                         <div class="rating">
                             
@@ -159,7 +159,7 @@
                         <p>$50.00</p>
                     </div>
                     <div class="col-4">
-                        <img src="Items/Mana_potion.png" alt="">
+                        <img class="item-img" src="Items/Mana_potion.png" alt="">
                         <h4>Mana Potion</h4>
                         <div class="rating">
                             
@@ -167,7 +167,7 @@
                         <p>$20.00</p>
                     </div>
                     <div class="col-4">
-                        <img src="Items/health_potion.png" alt="">
+                        <img class="item-img" src="Items/health_potion.png" alt="">
                         <h4>Health Potion</h4>
                         <div class="rating">
                             
@@ -282,6 +282,36 @@
 
     </footer>
 
+    <!-------------Modal----------->
+    <div id="item-modal" class="modal-container">
+        <div class="modal-content">
+          <h3 class="subtitulo">(Item name)</h3>
+          <button id="btn-modal" class="button-close">X</button>
+          <div class="modal-image-container">
+            <img id="item-image" class="modal-item-image" src="Items/health_potion.png">
+          </div>
+          <div class="modal-item-infos">
+            <div class="item-name-container">
+                <h3 id="item-name" class="modal-item-title"></h3>
+            </div>
+            <div class="item-effect-container">
+                <h3 class="modal-item-title">Use/Effect:</h3>
+                <p id="item-effect" class="modal-item-text">Causes the drinker...</p>
+            </div>
+            <div class="item-ingredients-container">
+                <h3 class="modal-item-title">Ingredients:</h3>
+                <ul id="item-ingredients" class="modal-item-ingredients">
+                </ul>
+            </div>
+            <div class="item-price-container">
+                <h3 class="modal-item-title" id="item-price-title">Price:</h3>
+                <span id="item-price" class="item-price">$29.99</span>
+                <button id="button-add-cart" class="submit-button">Add to cart</button>
+            </div>
+        </div>
+        </div>
+    </div>   
+
     <script>
     // JS para o menu responsivo
 
@@ -299,6 +329,25 @@
             MenuItems.style.maxHeight = "0px"
         }
     }
+
+    //modal iniciar
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+        if(modal){
+            modal.classList.add('show');
+            modal.addEventListener('click', (e) => {
+            if(e.target.id == modalID || e.target.className == 'button-close' ){
+                modal.classList.remove('show')
+            }
+        });
+        }
+        
+    }
+
+    const item = document.querySelector('.item-img');
+    item.addEventListener('click', function(){
+        iniciaModal('item-modal');
+    });
     
     </script>
 
