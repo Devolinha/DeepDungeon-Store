@@ -3,20 +3,28 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: #fff;
 }
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Teko:wght@500;700&display=swap');
 
 body{
+    background-image: linear-gradient(to bottom, rgb(179, 84, 166),#4e3c91);
     font-family: 'Abril Fatface'
 }
 header{
-    background: radial-gradient(#fff,#fcb4b4);
     height: 840px;
 }
 header .row{
     margin-top: 70px;
     margin-bottom: 70px;
+}
+header p{
+    font-size: 1.5em;
+    color: #fff;
+}
+header h1{
+    color: #fff;
 }
 
 /*--------Header-------*/
@@ -42,6 +50,14 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+}
+nav ul li a{
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+nav ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.247);
 }
 
 /*--------First Banner-------*/
@@ -77,11 +93,12 @@ nav ul li{
 .small-container{
     max-width: 1080px;
     margin:auto;
+    margin-top: 70px;
 }
 .col-3{
     flex:30%;
-    min-width: 250px;
-    margin-bottom: 30px;
+    max-width: 250px;
+    margin-bottom: 50px;
 }
 .col-3 img{
     width: 100%;
@@ -110,7 +127,7 @@ nav ul li{
 }
 .title::after{
     content:'';
-    background: black;
+    background: rgb(255, 255, 255);
     width: 80px;
     height: 5px;
     position: absolute;
@@ -118,21 +135,16 @@ nav ul li{
     left: 50%;
     transform: translateX(-50%);
 }
-h4{
-    color: #555;
-}
-
 
 /*--------offer-------*/
 .offer{
-    background: radial-gradient(#fff,#fcb4b4);
+    background: radial-gradient(rgb(185, 127, 240),#3931ac);
     margin-top: 8px;
     padding: 30px 0px;
 }
-small{
-    color: #555;
-}
-
+ .offer .row .col-2 p{
+    font-size: 1.5m;
+ }
 /*--------Testimonial-------*/
 .testimonial{
     padding-top: 100px;
@@ -153,7 +165,9 @@ small{
     width: 50px;
     margin-top: 20px;
     border-radius: 50%;
+    text-align: end;
 }
+
 .testimonial .col-3:hover{
     transform: translateY(-10px);
 }
@@ -270,4 +284,8 @@ footer hr{
     .col-2, .col-3, .col-4{
         flex-basis: 50%;
     }
+}
+
+.col-4:hover{
+    background-color: rgba(255, 255, 255, 0.219) ;
 }
