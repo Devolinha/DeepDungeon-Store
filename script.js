@@ -37,3 +37,28 @@ item[i].addEventListener('click', function(){
     iniciaModal('item-modal');
 });
 }
+
+
+//Modal infos
+
+const data = 
+[
+    {
+      "itemName": "pogao 1",
+      "use": "deixa roxo",
+      "ingredients": ["tal1","tal2","tal3"],
+      "price": 10.00
+    },
+    {
+      "itemName": "podao 2",
+      "use": "roxa",
+      "ingredients": ["1","2","3"],
+      "price": 12.00
+     }
+];
+
+const name = document.getElementsByClassName ("subtitulo");
+const price = document.getElementsByClassName ('item-price');
+const descrição = document.getElementsByClassName ('item-effect');
+
+console.log(name,price,descrição);
